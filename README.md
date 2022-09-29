@@ -1,2 +1,4 @@
 # BJIT_Assignment
 Ecommerce Website 
+Using HTML,CSS,PHP & MYSQL
+BASIC ADMIN AND USER FUNCTIONALITY
