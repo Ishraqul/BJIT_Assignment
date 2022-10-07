@@ -10,7 +10,7 @@ if(isset($_POST['Email']) && $_POST['Password']){
 	$result = mysqli_query($conn, $query);
 	if(mysqli_num_rows($result) != 0){
 		$_SESSION['user'] = $Email;
-		header ("Location:dash.php");
+		header ("Location:main.php");
 	}
 
 	else{

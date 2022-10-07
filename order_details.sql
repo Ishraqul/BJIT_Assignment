@@ -24,44 +24,46 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Table structure for table `order_details`
 --
 
-CREATE TABLE `categories` (
-  `id` int(200) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `Description` varchar(255) NOT NULL
+CREATE TABLE `order_details` (
+  `ID` int(200) NOT NULL,
+  `name` varchar(500) NOT NULL,
+  `product_name` varchar(200) NOT NULL,
+  `quantity` varchar(200) NOT NULL,
+  `total` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `categories`
+-- Dumping data for table `order_details`
 --
 
-INSERT INTO `categories` (`id`, `category`, `Description`) VALUES
-(89, 'Watches', 'Lorem Ipsum'),
-(90, 'Laptop', 'Lorem Ipsum'),
-(91, 'Shoes', 'Lorem Ipsum'),
-(92, 'Mobile', 'Lorem Ipsum');
+INSERT INTO `order_details` (`ID`, `name`, `product_name`, `quantity`, `total`) VALUES
+(5, 'Ishraqul Islam', 'iPhone13 Pro & Swatch Destination NYC', '3', '1499.99'),
+(7, 'Asif', 'MacBook Pro M1, Fossil, Samsung Galaxy S22', '6', '5099.96'),
+(8, 'ishraqul98@gmail.com', 'Macbook & Timex', '2', '0.00'),
+(9, 'abs@gmail.com', 'Samsung Galaxy S22, Penny Loafers', '1,1', '$949.99');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `categories`
+-- Indexes for table `order_details`
 --
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `order_details`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT for table `order_details`
 --
-ALTER TABLE `categories`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+ALTER TABLE `order_details`
+  MODIFY `ID` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -21,37 +21,8 @@ session_start();
   <a href="logout.php">Logout</a>
 
 </div>
-  
-<div class="content">
-
-  <div class = row >
-      <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-
-<section>
-      <style>
+<body>
+	<style>
         table {
             margin: 0 auto;
             font-size: large;
@@ -91,6 +62,7 @@ session_start();
                   <tr>
                         <th>ID</th>
                         <th>Customer Name</th>
+                        <th>Address</th>
                         <th>Product Name</th>
                         <th>Quantity</th>
                         <th>Total</th>
@@ -109,6 +81,7 @@ session_start();
                   <tr>
                         <td><?php echo $row['ID']; ?></td>
                         <td><?php echo $row['name']; ?></td>
+                        <td><?php echo $row['address']; ?></td>
                         <td><?php echo $row['product_name']; ?></td>
                         <td><?php echo $row['quantity']; ?></td>
                         <td><?php echo $row['total']; ?></td>
@@ -122,12 +95,6 @@ session_start();
             </table>
  
 </section>
-
-</div>
- 
-</div>
-
-
 
 
 </body>

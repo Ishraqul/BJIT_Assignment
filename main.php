@@ -27,14 +27,17 @@ if(isset($_POST['Add'])){
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="adminlog.php">Admin </a>
+    <li class="nav-item ml-auto">
+        <a class="nav-link" href="main.php">Home</a>
       </li>
-      <li class="nav-item ml-auto">
-        <a class="nav-link" href="">Login/Register</a>
+            <li class="nav-item active">
+        <a class="nav-link" href=""><?php echo " Welcome " . $_SESSION['user']; ?> </a>
       </li>
       <li class="nav-item ml-auto">
         <a class="nav-link" href="mycart.php">Cart</a>
+      </li>
+      <li class="nav-item ml-auto">
+        <a class="nav-link" href="logout.php">Logout</a>
       </li>
     </ul>
   </div>
@@ -146,8 +149,8 @@ if(isset($_POST['Add'])){
             <p class="card-text">Price: $<?php echo $row['price'] ?></p>
 
             <p class="card-text"><?php echo $row['description'] ?></p>
-            <form action="login.php" method="post">
-            <button type="submit" name="Add" class="btn btn-info">Add to cart</button>
+            <form action="detail.php?id=<?php echo $row['id']   ?>" method="post">
+            <button type="submit" name="Add" class="btn btn-info">Show More</button>
           </form>
          <!--  <form action="index.php" method="post">
             <input type="number" name="quan" min="1" max="200" placeholder="Quantity" required>
@@ -168,4 +171,3 @@ if(isset($_POST['Add'])){
 </body>
 </html>
 
-<!-- detail.php?id=<?php echo $row['id']   ?> -->

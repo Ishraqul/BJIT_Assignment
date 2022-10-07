@@ -14,10 +14,7 @@ session_start();
 <div class="sidebar">
       <?php echo " Welcome " . $_SESSION['user']; ?>
   <a class="active" href="index.php">Home</a>
-  <a href="order.php">Order</a>
-  <a href="">Product</a>
-  <a href="">Category</a>
-  <a href="">User</a>
+  <a href="order_d.php">Order</a>
   <a href="logout.php">Logout</a>
 
 </div>
