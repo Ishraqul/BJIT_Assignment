@@ -13,7 +13,7 @@ session_start();
 <body>
 
 <div class="sidebar">
-      <?php echo " Welcome " . $_SESSION['user']; ?>
+      <?php echo  $_SESSION['user']; ?>
   <a class="active" href="index.php">Home</a>
   <a href="#news">Order</a>
   <a href="propanel.php">Product</a>

@@ -41,7 +41,7 @@ if(isset($_REQUEST['id'])){
      while($row = mysqli_fetch_array($result)){
     ?>
      <div class="col-lg-3 mt-5">
-        
+      
             <div class="card" >
  
           <div class="card-body">
@@ -53,6 +53,7 @@ if(isset($_REQUEST['id'])){
             <button type="submit" name="Add" class="btn btn-info">Show More</button>
 
           </div>
+        </div>
         </div>
       </div>
       <?php

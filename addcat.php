@@ -15,18 +15,6 @@
                 <label >Category Name</label>
                 <input type="name" name="category" placeholder="" class="box" required >
             </div>
-            <!-- <div class= "form-group">
-                <label >Added Date</label> 
-                <input type="Date" name="Add_date" placeholder="" class="box"required>
-            </div>
-             <div class= "form-group">
-                <label >Price</label> 
-                <input type="Price" name="Price" placeholder="" class="box"required>
-            </div>
-             <div class= "form-group">
-                <label >Quantity</label> 
-                <input type="Quantity" name="Quantity" placeholder="" class="box"required>
-            </div> -->
             <div class= "form-group">
                 <label >Description</label> 
                 <input type="text" name="Description" placeholder="" class="box"required>

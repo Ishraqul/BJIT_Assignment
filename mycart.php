@@ -14,6 +14,7 @@ session_start();
         }
     }
 
+
     $total = 0;
 ?>
 
@@ -36,13 +37,13 @@ session_start();
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href=""><?php echo " Welcome " . $_SESSION['user']; ?> </a>
+        <a class="nav-link" href=""><?php echo  $_SESSION['user']; ?> </a>
       </li>
       <li class="nav-item ml-auto">
         <a class="nav-link" href="main.php">Home</a>
       </li>
       <li class="nav-item ml-auto">
-        <a class="nav-link" href="mycart.php">Shopping</a>
+        <a class="nav-link" href="mycart.php">Cart</a>
       </li>
            <li class="nav-item ml-auto">
         <a class="nav-link" href="logout.php">Logout</a>
@@ -92,27 +93,43 @@ session_start();
     </div>
     <br>
 
-` <div class="w-50 m-auto">
+ <div class="w-50 m-auto">
     <h1 class="text-center">ORDER DETAILS</h1>
         <form action="order_done.php" method="post">
                 <div class= "form-group">
                 </div>
                 <div class= "form-group">
-                        <label >Name</label>
+                        <label ><h5>Name</h5></label>
                         <input type="text" name="name" autocomplete="off" class="form-control" value="<?php echo $_SESSION['user']; ?>">
                 </div>
+                <br>
                 <div class= "form-group">
-                        <label >Product Name</label>
-                        <input type="text" name="product_name" autocomplete="off" class="form-control">
+                        <label ><h5>Product Name</h5></label>
+                        <?php
+        if(isset($_SESSION['cart'])):?>
+        <?php foreach($_SESSION['cart'] as $k => $item) :?>
+
+                        <input type="text" name="product_name" autocomplete="off" class="form-control" value="<?php echo $item['name']; ?>">
+
+                      <?php endforeach ?>
+            <?php endif ?>
                 </div>
+                <br>
                 <div class= "form-group">
-                        <label >Quantity</label>
-                        <input type="text" name="quantity" autocomplete="off" class="form-control">
+                        <label ><h5>Quantity</h5></label>
+                         <?php
+        if(isset($_SESSION['cart'])):?>
+        <?php foreach($_SESSION['cart'] as $k => $item) :?>
+                        <input type="text" name="quantity" autocomplete="off" class="form-control" value="<?php echo $item['quan']; ?>">
+                        <?php endforeach ?>
+            <?php endif ?>
                 </div>
+                <br>
                 <div class= "form-group">
-                        <label >Total</label>
-                        <input type="text" name="total" autocomplete="off" class="form-control">
+                        <label ><h5>Total</h5></label>
+                        <input type="text" name="total" autocomplete="off" class="form-control" value="<?php echo $total?>">
                 </div>
+                <br>
    
                 <button type="submit" class="btn btn-info">Order</button>
 </div>

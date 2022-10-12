@@ -1,5 +1,6 @@
 <?php
 @include'dbconnect.php';
+session_start();
 
 mysqli_select_db($conn, 'web');
 $name= $_POST['name'];
@@ -15,5 +16,5 @@ echo"$query";
 
 mysqli_query($conn, $query);
 
-header('location: mycart.php');
+header('location: dash.php?name='.$name);
 ?>

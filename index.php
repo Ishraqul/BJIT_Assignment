@@ -31,7 +31,7 @@ if(isset($_POST['Add'])){
         <a class="nav-link" href="adminlog.php">Admin </a>
       </li>
       <li class="nav-item ml-auto">
-        <a class="nav-link" href="">Login/Register</a>
+        <a class="nav-link" href="login.php">Login/Register</a>
       </li>
       <li class="nav-item ml-auto">
         <a class="nav-link" href="mycart.php">Cart</a>
@@ -54,7 +54,7 @@ if(isset($_POST['Add'])){
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://cdn.grabon.in/gograbon/images/web-images/uploads/1618566530277/promo-code-for-watches.jpg" width="1100" height="500">
+      <img src="https://cdn.grabon.in/gograbon/images/web-images/uploads/1618566530277/promo-code-for-watches.jpg" width="1600" height="500">
     </div>
     <div class="carousel-item">
       <img src="https://as2.ftcdn.net/v2/jpg/01/91/44/95/1000_F_191449546_98rlPC6oqA3NPMeIQ0lxkP185fljRXrQ.jpg
@@ -149,12 +149,6 @@ if(isset($_POST['Add'])){
             <form action="login.php" method="post">
             <button type="submit" name="Add" class="btn btn-info">Add to cart</button>
           </form>
-         <!--  <form action="index.php" method="post">
-            <input type="number" name="quan" min="1" max="200" placeholder="Quantity" required>
-            <input type="hidden" name="name" value="<?php echo $row['name'] ?>">
-            <input type="hidden" name="price" value="<?php echo $row['price'] ?>">
-            <button type="submit" name="Add" class="btn btn-info">Add to Cart</button>
-          </form> -->
           </div>
         </div>    
       </div>

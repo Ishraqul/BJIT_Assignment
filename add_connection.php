@@ -1,17 +1,16 @@
 <?php
-
 @include 'dbconnect.php';
-
 session_start();
-
+mysqli_select_db($conn, 'web');
 if(isset($_POST['submit'])):
    $name = $_POST['name'];
+   $categories_id = $_POST['categories_id'];
    $price = $_POST['price'];
    $quantity = $_POST['quantity'];
    $description = $_POST['description'];
 
 
-   $insert = "INSERT INTO product(name,price,quantity,description) VALUES ('$name','$price','$quantity','$description')";
+   $insert = "INSERT INTO product(name,categories_id,price,quantity,description) VALUES ('$name','$categories_id','$price','$quantity','$description')";
 
    echo "$insert";
 

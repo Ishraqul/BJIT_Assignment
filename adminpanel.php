@@ -12,9 +12,8 @@ session_start();
 <body>
 
 <div class="sidebar">
-      <?php echo " Welcome " . $_SESSION['user']; ?>
+      <?php echo " Welcome " . $_SESSION['user_ad']; ?>
   <a class="active" href="index.php">Home</a>
-  <a href="order.php">Order</a>
   <a href="propanel.php">Product</a>
   <a href="cat.php">Category</a>
   <a href="user.php">User</a>
@@ -27,28 +26,19 @@ session_start();
   <div class = row >
       <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">ORDERS</h5>
+        <p class="card-text">05</p>
+        
       </div>
     </div>
 
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">PRODUCTS</h5>
+        <p class="card-text">15</p>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
 
 <section>
       <style>
@@ -111,7 +101,7 @@ session_start();
                         <td><?php echo $row['name']; ?></td>
                         <td><?php echo $row['product_name']; ?></td>
                         <td><?php echo $row['quantity']; ?></td>
-                        <td><?php echo $row['total']; ?></td>
+                        <td>$<?php echo $row['total']; ?></td>
                        <!--  <td><a href = "delete.php?ID=<?php echo $row['ID']   ?>" <i class="fas fa-times"></i></a></td>  -->
                   </tr>
                   <?php

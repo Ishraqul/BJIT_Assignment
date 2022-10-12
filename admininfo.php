@@ -9,7 +9,7 @@ if(isset($_POST['Email']) && $_POST['Password']){
 
 	$result = mysqli_query($conn, $query);
 	if(mysqli_num_rows($result) != 0){
-		$_SESSION['user'] = $Email;
+		$_SESSION['user_ad'] = $Email;
 		header ("Location:adminpanel.php");
 	}
 

@@ -31,7 +31,7 @@ if(isset($_POST['Add'])){
         <a class="nav-link" href="main.php">Home</a>
       </li>
             <li class="nav-item active">
-        <a class="nav-link" href=""><?php echo " Welcome " . $_SESSION['user']; ?> </a>
+        <a class="nav-link" href="dash.php"><?php echo  $_SESSION['user']; ?> </a>
       </li>
       <li class="nav-item ml-auto">
         <a class="nav-link" href="mycart.php">Cart</a>
@@ -57,7 +57,7 @@ if(isset($_POST['Add'])){
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://cdn.grabon.in/gograbon/images/web-images/uploads/1618566530277/promo-code-for-watches.jpg" width="1100" height="500">
+      <img src="https://cdn.grabon.in/gograbon/images/web-images/uploads/1618566530277/promo-code-for-watches.jpg" width="1600" height="500">
     </div>
     <div class="carousel-item">
       <img src="https://as2.ftcdn.net/v2/jpg/01/91/44/95/1000_F_191449546_98rlPC6oqA3NPMeIQ0lxkP185fljRXrQ.jpg

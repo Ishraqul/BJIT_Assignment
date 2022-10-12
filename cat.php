@@ -11,9 +11,9 @@
 <body>
 
 <div class="sidebar">
-  <?php echo " Welcome " . $_SESSION['user']; ?>
+  <?php echo " Welcome " . $_SESSION['user_ad']; ?>
   <a class="active" href="adminpanel.php">Home</a>
-  <a href="#news">Order</a>
+
   <a href="propanel.php">Product</a>
   <a href="cat.php">Category</a>
   

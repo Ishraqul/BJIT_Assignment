@@ -1,13 +1,6 @@
 <?php
 session_start();
    
-if(isset($_POST['Add'])){
-            $id = rand(100,10000);
-            $name = $_POST['name'];
-            $price = $_POST['price'];
-            $quan = $_POST['quan'];
-        
-    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +8,7 @@ if(isset($_POST['Add'])){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link rel="stylesheet"  href="css/cart.css">
+  <link rel="stylesheet"  href="css/style2.css">
 
   <title></title>
 </head>
@@ -27,7 +20,7 @@ if(isset($_POST['Add'])){
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href=""><?php echo " Welcome " . $_SESSION['user']; ?> </a>
+        <a class="nav-link" href=""><?php echo  $_SESSION['user']; ?> </a>
       </li>
       <li class="nav-item ml-auto">
         <a class="nav-link" href="main.php">Home</a>
