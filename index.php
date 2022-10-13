@@ -107,7 +107,7 @@ if(isset($_POST['Add'])){
               <div class="col-lg-3 mt-5">
                 <a href = "product.php?id=<?php echo $row['id']?>" class="text-center">
             <div class="card" >
-           <!-- <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" height="200" width="250" class="center"/>' ?> -->
+          
           <div class="card-body">
 
             <h5 class="card-title"><?php echo $row['category'] ?></h5>
@@ -140,7 +140,7 @@ if(isset($_POST['Add'])){
       <div class="col-lg-3 mt-5">
         
             <div class="card" >
-           <!-- <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" height="200" width="250" class="center"/>' ?> -->
+            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" height="200" width="250" class="center"/>' ?>
           <div class="card-body">
             <h5 class="card-title"><?php echo $row['name'] ?></h5>
             <p class="card-text">Price: $<?php echo $row['price'] ?></p>

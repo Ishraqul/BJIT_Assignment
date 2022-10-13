@@ -37,7 +37,6 @@
         <th>Price</th>
         <th>Quantity</th>
         <th>Description</th>
-        <th>Image</th>
         <th>Action</th>
       </tr>
         <?php
@@ -56,7 +55,6 @@
             <td>$<?php echo $row['price']; ?></td>
             <td><?php echo $row['quantity']; ?></td>
             <td><?php echo $row['description']; ?></td>
-            <td><?php echo $row['image']; ?></td>
             <td><a href = "delete.php?id=<?php echo $row['id']   ?>" </a>Remove</td> 
           </tr>
           <?php
