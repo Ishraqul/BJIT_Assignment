@@ -20,7 +20,7 @@ if(isset($_POST['Add'])){
 
 	<title></title>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -56,9 +56,8 @@ if(isset($_POST['Add'])){
     <div class="carousel-item active">
       <img src="https://cdn.grabon.in/gograbon/images/web-images/uploads/1618566530277/promo-code-for-watches.jpg" width="1600" height="500">
     </div>
-    <div class="carousel-item">
-      <img src="https://as2.ftcdn.net/v2/jpg/01/91/44/95/1000_F_191449546_98rlPC6oqA3NPMeIQ0lxkP185fljRXrQ.jpg
-"  width="1100" height="500">
+     <div class="carousel-item active">
+      <img src="https://cdn.grabon.in/gograbon/images/web-images/uploads/1618566530277/promo-code-for-watches.jpg" width="1600" height="500">
     </div>
     <div class="carousel-item">
       <img src="images/premio.jpg"  width="1100" height="500">
@@ -92,7 +91,7 @@ if(isset($_POST['Add'])){
     <div class="container">
 
       <div class="row">
-        <div class="col-md-12">
+        <!-- <div class="col-md-12">
           <h1 class="text-center">CATEGORY</h1>
 
           <br>
@@ -121,7 +120,7 @@ if(isset($_POST['Add'])){
   }
   ?>
       
-    </div>
+    </div> -->
     
   </div>
 </section>

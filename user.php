@@ -13,7 +13,7 @@ session_start();
 <body>
 
 <div class="sidebar">
-      <?php echo  $_SESSION['user']; ?>
+      <?php echo " Welcome " . $_SESSION['user_ad']; ?>
   <a class="active" href="index.php">Home</a>
   <a href="#news">Order</a>
   <a href="propanel.php">Product</a>
@@ -23,7 +23,8 @@ session_start();
 
 </div>
       <style>
-        table {
+        table {\
+            width: 100%;
             margin: 0 auto;
             font-size: large;
             border: 1px solid black;

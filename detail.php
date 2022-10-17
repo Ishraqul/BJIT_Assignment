@@ -12,7 +12,7 @@ session_start();
 
   <title></title>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@ session_start();
 
 <?php
 @include'dbconnect.php';
-
+  
 if(isset($_REQUEST['id'])){
   $recv_data = $_REQUEST['id'];
 
@@ -51,7 +51,7 @@ if(isset($_REQUEST['id'])){
      while($row = mysqli_fetch_array($result)){
     ?>
     <div class="container-info">     
-     <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" height="400" width="400" class="center"/>;' ?>
+     <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" height="400" width="400" class="center"/>' ?>
    </div>
    
        <div class="container-main">

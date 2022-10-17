@@ -10,16 +10,16 @@ if(isset($_POST['submit'])){
    $Password = $_POST['Password'];
    
 
-   $select = " SELECT * FROM user_info WHERE Email = '$Email' && Password = '$Password'";
+   $select = " SELECT * FROM user_info WHERE Email = '$Email '";
 
    $result = mysqli_query($conn, $select);
 
    if(mysqli_num_rows($result) > 0){
-      $error[] = 'user already exist';
+      echo '<script>alert("Email exists")</script>';
    }else{
          $insert = "INSERT INTO user_info(Full_Name, Email, Password) VALUES('$Full_Name', '$Email','$Password')";
          mysqli_query($conn, $insert);
-         header('location:signup.php');
+         header('location:login.php');
 
       }
    }
@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, intial scale=1.0">
     <link rel="stylesheet" href="css/log.css">
     <body>
-        <?php echo '<script>alert("User Added")</script>'; ?>
+    
         <div class="form-container">
             <form action="" method="post">
                 <h3>Free Sign Up</h3>

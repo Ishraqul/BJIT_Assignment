@@ -13,9 +13,8 @@ session_start();
             }
         }
     }
-
-
     $total = 0;
+    $tq = 0;
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,7 @@ session_start();
 
     <title></title>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -69,7 +68,9 @@ session_start();
             <th width="20%"> Unit Price</th>
             <th width="20%"> Price</th>
             <th width="5%">Action</th>
+
         </tr>
+        
         <?php
         if(isset($_SESSION['cart'])):?>
         <?php foreach($_SESSION['cart'] as $k => $item) :?>
@@ -83,6 +84,7 @@ session_start();
                                        
                         <td><a href="mycart.php?remove=<?php echo $item['id']; ?>"><i class="fas fa-times"></i></a></td>
                     </tr>
+
                 <?php endforeach ?>
             <?php endif ?>
         </table>
@@ -90,6 +92,7 @@ session_start();
         <div class="total" style="float: right;">
             <h2>Total $: <span><?php echo $total; ?></span></h2>
         </div>
+        
     </div>
     <br>
 

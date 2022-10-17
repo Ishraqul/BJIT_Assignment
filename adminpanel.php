@@ -5,9 +5,10 @@ session_start();
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="css/sidebar.css">
 <link rel="stylesheet" href="css/tab.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
 </head>
 <body>
 
@@ -39,42 +40,9 @@ session_start();
       </div>
     </div>
 
-
-<section>
-      <style>
-        table {
-            margin: 0 auto;
-            font-size: large;
-            border: 1px solid black;
-        }
- 
-        h1 {
-            text-align: center;
-            color: #006600;
-            font-size: xx-large;
-            font-family: 'Gill Sans';
-        }
- 
-        td {
-            background-color: whitesmoke;
-            border: 1px solid black;
-        }
- 
-        th,
-        td {
-            font-weight: bold;
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
- 
-        td {
-            font-weight: lighter;
-        }
-    </style>
-</head>
 <body>
       <section>
+        <br>
             <h1>Order Details</h1>
 
             <table>
