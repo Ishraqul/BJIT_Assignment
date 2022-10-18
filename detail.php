@@ -51,7 +51,7 @@ if(isset($_REQUEST['id'])){
      while($row = mysqli_fetch_array($result)){
     ?>
     <div class="container-info">     
-     <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" height="400" width="400" class="center"/>' ?>
+      <img src="img/<?php echo $row['image']; ?>" class="card-img-top" alt="Product Images">
    </div>
    
        <div class="container-main">

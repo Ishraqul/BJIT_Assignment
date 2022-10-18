@@ -1,4 +1,5 @@
 <?php
+session_start();
 @include'dbconnect.php';
 @include'fetch_data.php';
 
@@ -61,6 +62,10 @@ if(isset($_GET['id']) && $_GET['id'] != ''){
             <div class= "form-group">
                 <label >Description</label> 
                 <input type="text" name="description" placeholder="" class="box"required>
+            </div>
+            <div class= "form-group">
+                <label >Upload Image</label> 
+                <input type="file" name="image" id="pro_image" class="box"required>
             </div>
                 <input type="submit" value="Submit" name="submit" class="form-btn">
 

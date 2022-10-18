@@ -55,7 +55,7 @@
             <td>$<?php echo $row['price']; ?></td>
             <td><?php echo $row['quantity']; ?></td>
             <td><?php echo $row['description']; ?></td>
-            <td><a href = "delete.php?id=<?php echo $row['id']   ?>" </a>Remove</td> 
+            <td><a href="edit_pro.php?edit_id=<?php echo $row['id']?>">Edit</a> && <a href = "delete.php?id=<?php echo $row['id']   ?>" </a>Remove</td> 
           </tr>
           <?php
               }

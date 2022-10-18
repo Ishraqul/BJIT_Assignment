@@ -46,7 +46,7 @@
             <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['category']; ?></td>
             <td><?php echo $row['Description']; ?></td>
-            <td><a href = "delete.php?id=<?php echo $row['id']   ?>" </a>Remove</td> 
+            <td><a href = "del_cat.php?id=<?php echo $row['id']   ?>" </a>Remove</td> 
           </tr>
           <?php
               }

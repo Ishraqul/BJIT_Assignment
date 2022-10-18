@@ -8,9 +8,11 @@ if(isset($_POST['submit'])):
    $price = $_POST['price'];
    $quantity = $_POST['quantity'];
    $description = $_POST['description'];
+    $image = $_POST['image'];
 
 
-   $insert = "INSERT INTO product(name,categories_id,price,quantity,description) VALUES ('$name','$categories_id','$price','$quantity','$description')";
+
+   $insert = "INSERT INTO product(name,categories_id,price,quantity,description,image) VALUES ('$name','$categories_id','$price','$quantity','$description','$image')";
 
    echo "$insert";
 

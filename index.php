@@ -87,42 +87,7 @@ if(isset($_POST['Add'])){
   <section>
 
   <div class="py-5">
-   <!--   <a class="cart" href="mycart.php"><i class="fas fa-shopping-cart"></i><span><?php if(isset($_SESSION['cart'])){ echo count($_SESSION['cart']); }else{ echo '0';} ?></span></a> -->
-    <div class="container">
-
-      <div class="row">
-        <!-- <div class="col-md-12">
-          <h1 class="text-center">CATEGORY</h1>
-
-          <br>
-          <div class="row">
-            <?php
-              require_once('dbconnect.php');
-              $sql = "SELECT  id,category FROM categories ";
-            $result =mysqli_query($conn,$sql);
-            if(mysqli_num_rows($result) > 0){
-              while($row = mysqli_fetch_array($result)){
-             ?>
-              <div class="col-lg-3 mt-5">
-                <a href = "product.php?id=<?php echo $row['id']?>" class="text-center">
-            <div class="card" >
-          
-          <div class="card-body">
-
-            <h5 class="card-title"><?php echo $row['category'] ?></h5>
-
-          </div>
-          
-        </div>
-         </a>
-      </div>
-    <?php }
-  }
-  ?>
-      
-    </div> -->
-    
-  </div>
+  
 </section>
 	<section>
     <div class="container">
@@ -130,7 +95,7 @@ if(isset($_POST['Add'])){
     <div class="row mt-5 ">
       <?php
         require_once('dbconnect.php');
-        $sql = "SELECT  id,name,price,description,image FROM product ";
+        $sql = "SELECT * FROM product ";
         $result =mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0){
               while($row = mysqli_fetch_array($result)){
@@ -139,7 +104,7 @@ if(isset($_POST['Add'])){
       <div class="col-lg-3 mt-5">
         
             <div class="card" >
-            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" height="200" width="250" class="center"/>' ?>
+           <img src="img/<?php echo $row['image']; ?>" class="card-img-top" alt="Product Images">
           <div class="card-body">
             <h5 class="card-title"><?php echo $row['name'] ?></h5>
             <p class="card-text">Price: $<?php echo $row['price'] ?></p>

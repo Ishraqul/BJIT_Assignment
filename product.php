@@ -57,7 +57,7 @@ if(isset($_REQUEST['id'])){
       <div class="col-lg-3 mt-5">
         
             <div class="card" >
-            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" height="200" width="250" class="center"/>' ?>
+            <img src="img/<?php echo $row['image']; ?>" class="card-img-top" alt="Product Images">
           <div class="card-body">
             <h5 class="card-title"><?php echo $row['name'] ?></h5>
             <p class="card-text">Price: $<?php echo $row['price'] ?></p>
