@@ -40,7 +40,6 @@ session_start();
       </div>
     </div>
 
-<body>
       <section>
         <br>
             <h1>Order Details</h1>
@@ -48,16 +47,14 @@ session_start();
             <table>
                   <tr>
                         <th>ID</th>
-                        <th>Customer Name</th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
+                        <th>Name</th>
                         <th>Total</th>
 
 
                   </tr>
                         <?php
                         require_once('dbconnect.php');
-                        $sql = "SELECT * FROM order_details ";
+                        $sql = "SELECT * FROM order_manager ";
                         $result =mysqli_query($conn,$sql);
                         if(mysqli_num_rows($result) > 0){
         
@@ -65,11 +62,10 @@ session_start();
         
       ?>
                   <tr>
-                        <td><?php echo $row['ID']; ?></td>
+                        <td><?php echo $row['order_id']; ?></td>
                         <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['product_name']; ?></td>
-                        <td><?php echo $row['quantity']; ?></td>
                         <td>$<?php echo $row['total']; ?></td>
+                   
                        <!--  <td><a href = "delete.php?ID=<?php echo $row['ID']   ?>" <i class="fas fa-times"></i></a></td>  -->
                   </tr>
                   <?php
@@ -88,5 +84,5 @@ session_start();
 
 
 
-</body>
+
 </html>

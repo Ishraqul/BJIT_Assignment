@@ -103,29 +103,7 @@ session_start();
                 </div>
                 <div class= "form-group">
                         <label ><h5>Name</h5></label>
-                        <input type="text" name="name" autocomplete="off" class="form-control" value="<?php echo $_SESSION['user']; ?>">
-                </div>
-                <br>
-                <div class= "form-group">
-                        <label ><h5>Product Name</h5></label>
-                        <?php
-        if(isset($_SESSION['cart'])):?>
-        <?php foreach($_SESSION['cart'] as $k => $item) :?>
-
-                        <input type="text" name="product_name" autocomplete="off" class="form-control" value="<?php echo $item['name']; ?>">
-
-                      <?php endforeach ?>
-            <?php endif ?>
-                </div>
-                <br>
-                <div class= "form-group">
-                        <label ><h5>Quantity</h5></label>
-                         <?php
-        if(isset($_SESSION['cart'])):?>
-        <?php foreach($_SESSION['cart'] as $k => $item) :?>
-                        <input type="text" name="quantity" autocomplete="off" class="form-control" value="<?php echo $item['quan']; ?>">
-                        <?php endforeach ?>
-            <?php endif ?>
+                        <input type="text" name="name" autocomplete="off" class="form-control"value="<?php echo $_SESSION['user']; ?>" required>
                 </div>
                 <br>
                 <div class= "form-group">
@@ -134,7 +112,7 @@ session_start();
                 </div>
                 <br>
    
-                <button type="submit" class="btn btn-info">Order</button>
+                <button type="submit" name="order" class="btn btn-info">Order</button>
 </div>
 </form>
   
