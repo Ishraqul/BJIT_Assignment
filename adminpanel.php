@@ -5,23 +5,21 @@ session_start();
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="css/sidebar.css">
 <link rel="stylesheet" href="css/tab.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
 </head>
 <body>
 
 <div class="sidebar">
       <?php echo " Welcome " . $_SESSION['user_ad']; ?>
-  <a class="active" href="index.php">Home</a>
-  <a href="propanel.php">Product</a>
-  <a href="cat.php">Category</a>
-  <a href="user.php">User</a>
+   <a class="active" href="main.php">Product page</a>   
+  <a href="dash.php">Home</a>
+  <a href="view.php">Order</a>
   <a href="logout.php">Logout</a>
-
 </div>
   
+
 <div class="content">
 
   <div class = row >
@@ -29,7 +27,6 @@ session_start();
       <div class="card-body">
         <h5 class="card-title">ORDERS</h5>
         <p class="card-text">05</p>
-        
       </div>
     </div>
 
@@ -39,20 +36,20 @@ session_start();
         <p class="card-text">15</p>
       </div>
     </div>
-
-      <section>
-        <br>
-            <h1>Order Details</h1>
+    </div>
+<section>
+              <h1>Order Details</h1>
 
             <table>
                   <tr>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>Customer Name</th>
                         <th>Total</th>
+                        <th>Action</th>
 
 
                   </tr>
-                        <?php
+  <?php
                         require_once('dbconnect.php');
                         $sql = "SELECT * FROM order_manager ";
                         $result =mysqli_query($conn,$sql);
@@ -61,28 +58,26 @@ session_start();
                         while($row = mysqli_fetch_array($result)){
         
       ?>
-                  <tr>
+<tr>
                         <td><?php echo $row['order_id']; ?></td>
                         <td><?php echo $row['name']; ?></td>
                         <td>$<?php echo $row['total']; ?></td>
-                   
-                       <!--  <td><a href = "delete.php?ID=<?php echo $row['ID']   ?>" <i class="fas fa-times"></i></a></td>  -->
+                       <td><a href = "view_ad.php?id=<?php echo $row['order_id']   ?>" >View</a></td>
                   </tr>
-                  <?php
-                              }
-                        }
-                  
-                  ?>
-            </table>
+      <?php
+      }
+      }
+
+      ?>
  
 </section>
 
-</div>
+
  
 </div>
 
 
 
 
-
+</body>
 </html>

@@ -13,10 +13,10 @@ session_start();
 
 <div class="sidebar">
       <?php echo " Welcome " . $_SESSION['user']; ?>
-  <a class="active" href="main.php">Home</a>
-  <a href="dash.php">Order</a>
+   <a class="active" href="main.php">Product page</a>   
+  <a href="dash.php">Home</a>
+  <a href="view.php">Order</a>
   <a href="logout.php">Logout</a>
-
 </div>
   
 
@@ -44,26 +44,23 @@ session_start();
                   <tr>
                         <th>ID</th>
                         <th>Customer Name</th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
                         <th>Total</th>
+                        <th>Action</th>
 
 
                   </tr>
   <?php
 @include'dbconnect.php';  
-  $get_info = "SELECT * FROM order_details WHERE `name` = '$_SESSION[user]'";
+  $get_info = "SELECT * FROM order_manager WHERE `name` = '$_SESSION[user]'";
   $result =mysqli_query($conn,$get_info);
   if(mysqli_num_rows($result) > 0){
      while($row = mysqli_fetch_array($result)){
     ?>
 <tr>
-                        <td><?php echo $row['ID']; ?></td>
+                        <td><?php echo $row['order_id']; ?></td>
                         <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['product_name']; ?></td>
-                        <td><?php echo $row['quantity']; ?></td>
                         <td>$<?php echo $row['total']; ?></td>
-                       <!--  <td><a href = "delete.php?ID=<?php echo $row['ID']   ?>" <i class="fas fa-times"></i></a></td>  -->
+                       <td><a href = "view.php?id=<?php echo $row['order_id']   ?>" >View</a></td>
                   </tr>
       <?php
       }

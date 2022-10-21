@@ -3,6 +3,7 @@
             margin: 0 auto;
             font-size: large;
             border: 1px solid black;
+            width: 100%;
         }
  
         h1 {

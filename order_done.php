@@ -28,5 +28,5 @@ if(mysqli_query($conn, $query)){
 
 }
 }
-header('location: mycart.php');
+header('location: dash.php?name='.$name);
 ?>
